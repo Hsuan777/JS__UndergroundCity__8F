@@ -3,7 +3,11 @@ h2, .h2 {
   margin-bottom: 0;
 }
 h3, .h3 {
-  font-size: 110px;
+  font-size: 100px;
+  margin-bottom: 0;
+}
+h4, .h4 {
+  font-size: 48px;
   margin-bottom: 0;
 }
 
@@ -30,35 +34,73 @@ h3, .h3 {
       background-color: black;
       z-index: 1;
     }
+    &__hollow {
+      &::after {
+        width: 100px;
+        height: 100px;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 20px black solid;
+        background-color: transparent;
+        z-index: 1;   
+      }
+    }
   }
   &__cross {
     position: relative;
     width: 160px;
     height: 25px;
-    background-color: black;
-    border: 4px white solid;
+    margin-top: 30%;
+    left: 0;
+    border: 4px map-get($theme-colors, "primary") solid;
     transform: rotate(-45deg);
     &::after {
       position: absolute;
       content: "";
-      top: 0;
-      left: 0;
+      top: -2.5px;
+      left: -2.5px;
       width: 160px;
       height: 25px;
-      background-color: black;
-      border: 4px white solid;
+      border: 4px map-get($theme-colors, "primary") solid;
+      background-color: map-get($theme-colors, "primary");
       transform: rotate(90deg);
-      z-index: 1;
     }
     &::before {
       position: absolute;
       content: "";
-      top: 0;
-      left: 0;
-      width: 152px;
-      height: 17px;
-      background-color: black;
-      z-index: 3;
+      top: -1px;
+      left: -1px;
+      width: 154px;
+      height: 20px;
+      border:1px map-get($theme-colors, "primary") solid;
+      background-color: map-get($theme-colors, "primary");
+      z-index: 1;
+    }
+    &__secondary {
+      border: 4px white solid;
+      &::after {
+        width: 151px;
+        height: 18px;
+        border: 0px;
+        outline: 4px white solid;
+        background-color: black;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        width: 152px;
+        height: 17px;
+        border: 1px black solid;
+        background-color: black;
+      }
     }
   }
 }

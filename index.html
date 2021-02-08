@@ -4,45 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/all.css">
   <title>JS地下城 ｜ 8F ｜ 井字遊戲</title>
 </head>
-<body>
-  <section class="custom__height container_fluid bg-dark">
-    <div class="row justify-content-center align-items-center h-100">
+<body class="bg-dark">
+  <section class="custom__height container_fluid">
+    <div class="row align-items-center h-100 mb-3">
       <div class="col-5 mx-auto">
-        <table class="table table-borderless">
-          <tbody class="text-center text-white">
-            <tr>
-              <td class="h3 fst-italic">TCI</td>
-              <td class="d-flex justify-content-center">
-                <p class="custom__circle mb-0"></p>
-              </td>
-              <td class="align-middle">
-                <p class="custom__cross"></p>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-primary align-middle">
-                <p class="custom__cross"></p>
-              </td>
-              <td class="h3 fst-italic">TAC</td>
-              <td class="text-secondary align-middle">
-                <p class="custom__circle mb-0"></p>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-secondary align-middle">
-                <p class="custom__circle mb-0"></p>
-              </td>
-              <td class="align-middle">
-                <p class="custom__cross"></p>
-              </td>
-              <td class="h3 fst-italic">TOE</td>
-            </tr>
-          </tbody>
-        </table>
-        <input type="button" value="START" class="btn btn-outline-secondary w-100 bg-white">
+        <div class="row row-cols-3 g-3">
+          <!-- 第一行 -->
+          <div class="col">
+            <p class="h3 fst-italic text-center text-white mt-2">TIC</p>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__circle "></p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__cross custom__cross__secondary"></p>
+            </div>
+          </div>
+          <!-- 第二行 -->
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__cross"></p>
+            </div>
+          </div>
+          <div class="col">
+            <p class="h3 fst-italic text-center text-white mt-2">TAC</p>              
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__circle custom__circle__hollow"></p>
+            </div>
+          </div>
+          <!-- 第三行 -->
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__circle custom__circle__hollow"></p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <p class="custom__cross"></p>
+            </div>
+          </div>
+          <div class="col">
+            <p class="h3 fst-italic text-center text-white mt-2">TOE</p>
+          </div>
+        </div>
+        <input type="button" value="START" class="btn btn-outline-secondary h4 w-100 bg-white">
       </div>
     </div>
   </section>

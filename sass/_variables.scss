@@ -1,6 +1,10 @@
+$enable-negative-margins: true;
+
 $theme-colors: (
   "primary": #ED494C,
   "secondary" : #FF6D70,
   "dark" : #000000,
   "white": #ffffff
-)
+);
+
+$font-family-sans-serif: 'Roboto Condensed', -apple-system, "Segoe UI", "Microsoft JhengHei", "Roboto", Arial, sans-serif;
