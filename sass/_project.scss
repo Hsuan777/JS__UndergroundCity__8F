@@ -58,8 +58,6 @@ h4, .h4 {
     position: relative;
     width: 160px;
     height: 25px;
-    margin-top: 30%;
-    left: 0;
     border: 4px map-get($theme-colors, "primary") solid;
     transform: rotate(-45deg);
     &::after {
