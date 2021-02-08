@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="css/all.css">
   <title>JS地下城 ｜ 8F ｜ 井字遊戲</title>
 </head>
-<body class="bg-dark">
-  <section class="custom__height container-fluid my-3">
+<body class="bg-secondary">
+  <!-- 主畫面 -->
+  <section class="custom__height container-fluid my-3 d-none">
     <div class="row align-items-center h-100">
       <div class="col-12 col-lg-8 col-xl-6 mx-auto">
         <div class="row row-cols-3 g-3 mb-3">
@@ -64,6 +65,71 @@
           </div>
         </div>
         <input type="button" value="START" class="btn btn-outline-secondary h4 w-100 bg-white">
+      </div>
+    </div>
+  </section>
+
+  <!-- 遊戲畫面 -->
+  <section class="custom__height container-fluid my-3">
+    <div class="row row-cols-1 g-3">
+      <!-- 即時戰績 -->
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <ul class="list-unstyled d-flex justify-content-center align-items-center">
+            <li>
+              <div class="input-group">
+                <span class="input-group-text bg-primary text-white border-dark border-2">╳</span>
+                <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
+              </div>
+            </li>
+            <li>
+              <p class="btn btn-dark py-2 mb-0">VS</p>
+            </li>
+            <li>
+              <div class="input-group">
+                <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
+                <span class="input-group-text text-white bg-dark border-dark border-2">
+                  <span class="material-icons">
+                    radio_button_unchecked
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 遊戲區域 -->
+      <div class="col-5 mx-auto"> 
+        <ul class="list-unstyled row row-cols-3 mb-3">
+          <li class="col border-bottom border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-bottom border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-bottom border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-bottom border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-bottom border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-bottom border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-end border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+          <li class="col border-primary border-3">
+            <input type="button" class="btn px-5 py-4">
+          </li>
+        </ul>
+        <input type="button" value="RESTART" class="btn btn-primary h5 w-100 bg-primary text-white">
       </div>
     </div>
   </section>
