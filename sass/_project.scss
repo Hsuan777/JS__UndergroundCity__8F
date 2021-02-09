@@ -11,7 +11,6 @@ h4, .h4 {
   margin-bottom: 0;
 }
 
-
 .custom {
   &__height {
     height: 100vh;
@@ -33,7 +32,7 @@ h4, .h4 {
       transform: translate(-50%, -50%);
       border-radius: 50%;
     }
-    &__hollow {
+    &__outlined {
       &::after {
         width: 100px;
         height: 100px;
@@ -51,6 +50,15 @@ h4, .h4 {
         border: 5px map-get($theme-colors, "primary") solid;
         background-color: transparent;
         z-index: 1;   
+      }
+    }
+    &--lg {
+      width: 460px;
+      height: 460px;
+      &::after {
+        width: 420px;
+        height: 420px;
+        border: 40px map-get($theme-colors, "primary") solid;
       }
     }
   }
@@ -82,7 +90,7 @@ h4, .h4 {
       background-color: map-get($theme-colors, "primary");
       z-index: 1;
     }
-    &__secondary {
+    &__outlined {
       border: 4px white solid;
       &::after {
         width: 151px;
@@ -98,6 +106,38 @@ h4, .h4 {
         height: 17px;
         border: 1px black solid;
         background-color: black;
+      }
+    }
+    &--lg {
+      width: 460px;
+      height: 50px;
+      &::after {
+        width: 460px;
+        height: 50px;
+      }
+      &::before {
+        width: 454px;
+        height: 44px;
+      }
+    }
+  }
+  &__winner {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "WINNER!";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 154px;
+      font-style: italic;
+      font-weight: bolder;
+      color: map-get($theme-colors, "secondary" );
+      -webkit-text-stroke: 3px white;
+    }
+    &--draw {
+      &::after {
+        content: "DRAW!"
       }
     }
   }
