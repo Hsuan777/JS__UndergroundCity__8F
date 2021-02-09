@@ -18,7 +18,7 @@
           <!-- 第一行 -->
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="h3 fst-italic text-center text-white">TIC</p>
+              <p class="h3 fst-italic text-white mb-0">TIC</p>
             </div>
           </div>
           <div class="col">
@@ -28,39 +28,39 @@
           </div>
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="custom__cross custom__cross__secondary"></p>
+              <p class="custom__cross custom__cross__secondary mb-0"></p>
             </div>
           </div>
           <!-- 第二行 -->
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="custom__cross"></p>
+              <p class="custom__cross mb-0"></p>
             </div>
           </div>
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="h3 fst-italic text-center text-white">TAC</p>              
+              <p class="h3 fst-italic text-white mb-0">TAC</p>              
             </div>
           </div>
           <div class="col">
             <div class="d-flex justify-content-center">
-              <p class="custom__circle custom__circle__hollow"></p>
+              <p class="custom__circle custom__circle__hollow mb-0"></p>
             </div>
           </div>
           <!-- 第三行 -->
           <div class="col">
             <div class="d-flex justify-content-center">
-              <p class="custom__circle custom__circle__hollow"></p>
+              <p class="custom__circle custom__circle__hollow mb-0"></p>
             </div>
           </div>
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="custom__cross"></p>
+              <p class="custom__cross mb-0"></p>
             </div>
           </div>
           <div class="col">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <p class="h3 fst-italic text-white mt-2">TOE</p>
+              <p class="h3 fst-italic text-white mb-0">TOE</p>
             </div>
           </div>
         </div>
@@ -75,23 +75,21 @@
       <!-- 即時戰績 -->
       <div class="col">
         <div class="d-flex justify-content-center">
-          <ul class="list-unstyled d-flex justify-content-center align-items-center">
+          <ul class="list-unstyled d-flex justify-content-center align-items-center mb-0">
             <li>
               <div class="input-group">
-                <span class="input-group-text bg-primary text-white border-dark border-2">╳</span>
+                <span class="input-group-text bg-primary text-white border-dark border-2">Ｘ</span>
                 <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
               </div>
             </li>
-            <li>
-              <p class="btn btn-dark py-2 mb-0">VS</p>
+            <li class="bg-dark">
+              <p class="bg-dark text-white px-3 py-2 mb-0">VS</p>
             </li>
             <li>
               <div class="input-group">
                 <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
                 <span class="input-group-text text-white bg-dark border-dark border-2">
-                  <span class="material-icons">
-                    radio_button_unchecked
-                  </span>
+                  Ｏ
                 </span>
               </div>
             </li>
@@ -99,37 +97,51 @@
         </div>
       </div>
       <!-- 遊戲區域 -->
-      <div class="col-5 mx-auto"> 
-        <ul class="list-unstyled row row-cols-3 mb-3">
+      <div class="col col-sm-8 col-md-6 col-lg-4 mx-auto"> 
+        <p class="text-center h5 text-white mb-3">YOUR TRUN!</p>
+        <!-- 井字區 -->
+        <ul class="list-unstyled row row-cols-3 mb-3 px-2 d-none">
           <li class="col border-bottom border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-bottom border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-bottom border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-bottom border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-bottom border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-bottom border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-end border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
           <li class="col border-primary border-3">
-            <input type="button" class="btn px-5 py-4">
+            <input type="button" class="btn w-100 h-100 py-5">
           </li>
         </ul>
-        <input type="button" value="RESTART" class="btn btn-primary h5 w-100 bg-primary text-white">
+        <!-- 勝者顯示 -->
+        <ul class="list-unstyled d-flex justify-content-center align-items-center h-100">
+          <li>
+            <p class="custom__circle mb-0"></p>
+          </li>
+          <li>
+            <p class="custom__cross mb-0"></p>
+          </li>
+        </ul>
+        <!-- 平手顯示 -->
+        <!-- <div class="d-flex justify-content-center align-items-center h-100 d-none">
+        </div> -->
+        <input type="button" value="RESTART" class="btn btn-primary h4 w-100 bg-primary text-white">
       </div>
     </div>
   </section>
