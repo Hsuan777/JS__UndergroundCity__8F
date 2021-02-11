@@ -15,6 +15,9 @@ h4, .h4 {
   &__height {
     height: 100vh;
   }
+  &__gameBtn {
+    height: 100px;
+  }
   &__circle {
     position: relative;
     width: 160px;
@@ -119,6 +122,9 @@ h4, .h4 {
         width: 454px;
         height: 44px;
       }
+    }
+    &__height {
+      padding: 50% 0;
     }
   }
   &__winner {

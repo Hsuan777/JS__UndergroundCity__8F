@@ -3,6 +3,9 @@ let gameStart = document.querySelector('.js-gameStart')
 let gameRestart = document.querySelector('.js-gameRestart')
 let displayMain = document.querySelector('.js-displayMain')
 let displayGame = document.querySelector('.js-displayGame')
+let displayGamer = document.querySelector('.js-displayGamer')
+let gamerOneWinTimes = document.querySelector('.js-gamerOneWinTimes')
+let gamerTwoWinTimes = document.querySelector('.js-gamerTwoWinTimes')
 let gameBtnList = document.querySelector('.js-gameBtnList')
 let gameBtnAll = document.querySelectorAll('.js-gameBtn')
 let displayWinner = document.querySelector('.js-winner')
@@ -36,6 +39,7 @@ const game = function () {
     if (isClick.indexOf(btnOfvalue) === -1) {
       if (nowGamer === 1) {
         e.target.textContent = 'Ｏ'
+        displayGamer.textContent = 'Ｘ TURN!'
         record.value = btnOfvalue
         record.gamer = 1
         recordStorage.push(record)
@@ -43,6 +47,7 @@ const game = function () {
         nowGamer = 0
       } else {
         e.target.textContent = 'Ｘ'
+        displayGamer.textContent = 'Ｏ TURN!'
         record.value = btnOfvalue
         record.gamer = 0
         recordStorage.push(record)
@@ -53,6 +58,7 @@ const game = function () {
   }
   this.init = () => {
     recordStorage = []
+    nowGamer = 1
     gameBtnAll.forEach( item => {
       item.textContent = ''
     })
@@ -131,10 +137,14 @@ const game = function () {
           gameBtnList.classList.add('d-none')
           displayWinner.classList.remove('d-none') 
           winnerCircle.classList.remove('d-none')
+          gameRecord.gamerOneWin += 1
+          gamerOneWinTimes.value = gameRecord.gamerOneWin 
         } else if (two) {
           gameBtnList.classList.add('d-none')
           displayWinner.classList.remove('d-none') 
           winnerCross.classList.remove('d-none')
+          gameRecord.gamerTwoWin += 1
+          gamerTwoWinTimes.value = gameRecord.gamerTwoWin 
         } else {
           draw += 1
         }

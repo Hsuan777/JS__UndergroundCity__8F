@@ -79,7 +79,7 @@
             <li>
               <div class="input-group">
                 <span class="input-group-text bg-primary text-white border-dark border-2">Ｘ</span>
-                <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
+                <input type="text" class="js-gamerTwoWinTimes form-control border-dark border-2 rounded-0" value="" disabled>
               </div>
             </li>
             <li class="bg-dark">
@@ -87,7 +87,7 @@
             </li>
             <li>
               <div class="input-group">
-                <input type="text" class="form-control border-dark border-2 rounded-0" disabled>
+                <input type="text" class="js-gamerOneWinTimes form-control border-dark border-2 rounded-0" value="" disabled>
                 <span class="input-group-text text-white bg-dark border-dark border-2">
                   Ｏ
                 </span>
@@ -98,46 +98,46 @@
       </div>
       <!-- 遊戲區域 -->
       <div class="col col-sm-8 col-md-6 col-lg-4 mx-auto"> 
-        <p class="text-center h5 text-white mb-3">YOUR TRUN!</p>
+        <p class="js-displayGamer text-center h5 text-white mb-3">Ｏ TURN!</p>
         <!-- 井字區 -->
         <ul class="js-gameBtnList list-unstyled row row-cols-3 mb-3 px-2">
-          <li class="col border-bottom border-end border-primary border-3">
-            <button type="button" value="1" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-end border-primary border-3">
+            <button type="button" value="1" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-bottom border-end border-primary border-3">
-            <button type="button" value="2" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-end border-primary border-3">
+            <button type="button" value="2" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-bottom border-primary border-3">
-            <button type="button" value="3" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-primary border-3">
+            <button type="button" value="3" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-bottom border-end border-primary border-3">
-            <button type="button" value="4" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-end border-primary border-3">
+            <button type="button" value="4" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-bottom border-end border-primary border-3">
-            <button type="button" value="5" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-end border-primary border-3">
+            <button type="button" value="5" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-bottom border-primary border-3">
-            <button type="button" value="6" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-bottom border-primary border-3">
+            <button type="button" value="6" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-end border-primary border-3">
-            <button type="button" value="7" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-end border-primary border-3">
+            <button type="button" value="7" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-end border-primary border-3">
-            <button type="button" value="8" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-end border-primary border-3">
+            <button type="button" value="8" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
-          <li class="col border-primary border-3">
-            <button type="button" value="9" class="js-gameBtn btn h4 w-100 h-100 py-5"></button>
+          <li class="custom__gameBtn col border-primary border-3">
+            <button type="button" value="9" class="js-gameBtn btn h4 w-100 h-100"></button>
           </li>
         </ul>
         <!-- 勝者顯示 -->
-        <ul class="js-winner custom__winner list-unstyled d-flex justify-content-center align-items-center h-100 d-none">
+        <ul class="js-winner custom__winner list-unstyled d-flex justify-content-center align-items-center d-none">
           <!-- 圈勝利 -->
           <li class="js-winnerCircle d-none">
-            <p class="custom__circle mb-0"></p>
+            <p class="custom__circle custom__circle--lg mb-0"></p>
           </li>
           <!-- 叉勝利 -->
-          <li class="js-winnerCross d-none">
-            <p class="custom__cross mb-0"></p>
+          <li class="js-winnerCross custom__cross__height d-none">
+            <p class="custom__cross custom__cross--lg mb-0"></p>
           </li>
           <!-- 平手 -->
           <li class="js-winnerDraw d-flex justify-content-center align-items-center d-none">
