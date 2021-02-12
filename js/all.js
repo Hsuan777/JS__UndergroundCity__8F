@@ -168,7 +168,7 @@ const game = function () {
   }
   this.getWebGameRecord = () => {
     let WebGameRecord = JSON.parse(localStorage.getItem('WebGameRecord')) 
-    gameRecord = WebGameRecord
+    gameRecord = WebGameRecord || gameRecord  
     gamerOneWinTimes.value = gameRecord.gamerOneWin 
     gamerTwoWinTimes.value = gameRecord.gamerTwoWin 
   }
