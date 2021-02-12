@@ -174,7 +174,6 @@ const game = function () {
   }
 }
 const newGame = new game()
-
 gameStart.addEventListener('click', () => {
   backGround.classList.add('bg-secondary')
   backGround.classList.remove('bg-dark')
