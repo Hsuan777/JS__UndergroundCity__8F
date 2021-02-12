@@ -164,6 +164,13 @@ const game = function () {
       displayWinner.classList.add('custom__winner--draw') 
       winnerDraw.classList.remove('d-none')
     }
+    localStorage.setItem('WebGameRecord', JSON.stringify(gameRecord))
+  }
+  this.getWebGameRecord = () => {
+    let WebGameRecord = JSON.parse(localStorage.getItem('WebGameRecord')) 
+    gameRecord = WebGameRecord
+    gamerOneWinTimes.value = gameRecord.gamerOneWin 
+    gamerTwoWinTimes.value = gameRecord.gamerTwoWin 
   }
 }
 const newGame = new game()
@@ -173,6 +180,7 @@ gameStart.addEventListener('click', () => {
   backGround.classList.remove('bg-dark')
   displayMain.classList.add('d-none')
   displayGame.classList.remove('d-none')
+  newGame.getWebGameRecord()
 })
 gameBtnAll.forEach( item => {
   item.addEventListener('click', newGame.play)
