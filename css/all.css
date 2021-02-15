@@ -11548,6 +11548,12 @@ h4, .h4, .h4 {
   margin-bottom: 0;
 }
 
+@media (max-width: 575.98px) {
+  h4, .h4, .h4 {
+    font-size: 24px;
+  }
+}
+
 .custom__height {
   height: 100vh;
 }
@@ -11761,9 +11767,23 @@ h4, .h4, .h4 {
   height: 50px;
 }
 
+@media (max-width: 575.98px) {
+  .custom__cross--lg {
+    width: 230px;
+    height: 25px;
+  }
+}
+
 .custom__cross--lg::after {
   width: 460px;
   height: 50px;
+}
+
+@media (max-width: 575.98px) {
+  .custom__cross--lg::after {
+    width: 230px;
+    height: 25px;
+  }
 }
 
 .custom__cross--lg::before {
@@ -11771,8 +11791,15 @@ h4, .h4, .h4 {
   height: 44px;
 }
 
+@media (max-width: 575.98px) {
+  .custom__cross--lg::before {
+    width: 227px;
+    height: 22px;
+  }
+}
+
 .custom__cross__height {
-  padding: 50% 0;
+  padding: 40% 0;
 }
 
 .custom__winner {
@@ -11791,6 +11818,12 @@ h4, .h4, .h4 {
   font-weight: bolder;
   color: #FF6D70;
   -webkit-text-stroke: 3px white;
+}
+
+@media (max-width: 575.98px) {
+  .custom__winner::after {
+    font-size: 72px;
+  }
 }
 
 .custom__winner--draw::after {

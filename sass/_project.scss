@@ -12,6 +12,9 @@ h3, .h3 {
 h4, .h4 {
   font-size: 48px;
   margin-bottom: 0;
+  @include media-breakpoint-down(sm) { 
+    font-size: 24px;
+  }
 }
 
 .custom {
@@ -173,17 +176,29 @@ h4, .h4 {
     &--lg {
       width: 460px;
       height: 50px;
+      @include media-breakpoint-down(sm) { 
+        width: 230px;
+        height: 25px;
+      }
       &::after {
         width: 460px;
         height: 50px;
+        @include media-breakpoint-down(sm) { 
+          width: 230px;
+          height: 25px;
+        }
       }
       &::before {
         width: 454px;
         height: 44px;
+        @include media-breakpoint-down(sm) { 
+          width: 227px;
+          height: 22px;
+        }
       }
     }
     &__height {
-      padding: 50% 0;
+      padding: 40% 0;
     }
   }
   &__winner {
@@ -199,6 +214,9 @@ h4, .h4 {
       font-weight: bolder;
       color: map-get($theme-colors, "secondary" );
       -webkit-text-stroke: 3px white;
+      @include media-breakpoint-down(sm) { 
+        font-size: 72px;
+      }
     }
     &--draw {
       &::after {
