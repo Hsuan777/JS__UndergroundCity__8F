@@ -15,34 +15,33 @@ let winnerDraw = document.querySelector('.js-winnerDraw')
 
 const game = function () {
   let vm = this
-  // 遊戲回合紀錄，遊戲回合、玩家勝利次數
+  // 若達到 9，則為平手
   let step = 0
+  // 玩家勝利次數
   let gameRecord = {
-    times: 0,
     gamerOneWin:0,
     gamerTwoWin:0
   }
-  // 遊玩暫存紀錄
+  // 點擊暫存紀錄，後續檢查是否已點過
   let recordStorage = []
   // 玩家一代表符號為 Ｏ，代表數字為 1
   // 玩家二代表符號為 Ｘ，代表數字為 -1
   let nowGamer = 1
-  // 若達到 9，則為平手
   this.play = (e) => {
-    let btnOfvalue = e.target.value
+    let btnOfValue = e.target.value
     let record = {
       value: '',
       gamer: 1
     }
-    let isClick = []
+    let clicked = []
     recordStorage.forEach( item => {
-      isClick.push(item.value)
+      clicked .push(item.value)
     })
-    if (isClick.indexOf(btnOfvalue) === -1) {
+    if (clicked .indexOf(btnOfValue) === -1) {
       if (nowGamer === 1) {
         e.target.textContent = 'Ｏ'
         displayGamer.textContent = 'Ｘ TURN!'
-        record.value = btnOfvalue
+        record.value = btnOfValue
         record.gamer = 1
         recordStorage.push(record)
         vm.isWin()
@@ -50,7 +49,7 @@ const game = function () {
       } else {
         e.target.textContent = 'Ｘ'
         displayGamer.textContent = 'Ｏ TURN!'
-        record.value = btnOfvalue
+        record.value = btnOfValue
         record.gamer = -1
         recordStorage.push(record)
         vm.isWin()
@@ -74,10 +73,7 @@ const game = function () {
   }
   this.isWin = () => {
     let winer = null
-    let row = null
-    let col = null
     const textContent = (gamerBtn) => { 
-      console.log(gamerBtn);
       if (gamerBtn.textContent === 'Ｏ') {
         return 1
       } else if (gamerBtn.textContent === 'Ｘ') {
@@ -91,31 +87,29 @@ const game = function () {
     for (let n = 0; n < 3; n++) {
       row = Math.abs(textContent(gameBtnAll[3*n]) + textContent(gameBtnAll[3*n+1]) + textContent(gameBtnAll[3*n+2]))
       col = Math.abs(textContent(gameBtnAll[n]) + textContent(gameBtnAll[n+3]) + textContent(gameBtnAll[n+6]))
-      if (row === 3) {
-        winer = textContent(gameBtnAll[3*n])
-      } else if (col === 3) {
-        winer = textContent(gameBtnAll[n])
-      }
+      if (row === 3) winer = textContent(gameBtnAll[3*n])
+      if (col === 3) winer = textContent(gameBtnAll[n])
     }
-    if (slash === 3) {
-      winer = textContent(gameBtnAll[0])
-    } else if (backSlash === 3) {
-      winer = textContent(gameBtnAll[2])
-    }
-    if (winer === 1) {
-      gameBtnList.classList.add('d-none')
-      displayWinner.classList.remove('d-none') 
-      winnerCircle.classList.remove('d-none')
-      gameRecord.gamerOneWin += 1
-      gamerOneWinTimes.value = gameRecord.gamerOneWin 
-    } else if (winer === -1) {
-      gameBtnList.classList.add('d-none')
-      displayWinner.classList.remove('d-none') 
-      winnerCross.classList.remove('d-none')
-      gameRecord.gamerTwoWin += 1
-      gamerTwoWinTimes.value = gameRecord.gamerTwoWin 
-    } else if (winer === null) {
-      step += 1
+    if (slash === 3) winer = textContent(gameBtnAll[0])
+    if (backSlash === 3) winer = textContent(gameBtnAll[2])
+    switch (winer) {
+      case 1:
+        gameBtnList.classList.add('d-none')
+        displayWinner.classList.remove('d-none') 
+        winnerCircle.classList.remove('d-none')
+        gameRecord.gamerOneWin += 1
+        gamerOneWinTimes.value = gameRecord.gamerOneWin 
+        break
+      case -1:
+        gameBtnList.classList.add('d-none')
+        displayWinner.classList.remove('d-none') 
+        winnerCross.classList.remove('d-none')
+        gameRecord.gamerTwoWin += 1
+        gamerTwoWinTimes.value = gameRecord.gamerTwoWin 
+        break
+      case null:
+        step += 1
+        break
     }
     if (step === 9) {
       gameBtnList.classList.add('d-none')
